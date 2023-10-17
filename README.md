@@ -20,7 +20,7 @@ Here are some of the key differences between Gaussian mixture models and the K-m
 
 Just as in the k-means expectation–maximization approach, to change the parameters of each distribution until the probabilities are optimize. The same with k-means it is tunning the centroids until the Euclidean distances are optimize. 
 
-Choosing the covariance type
+Choosing the covariance type:
 
 If you look at the details of the preceding fits, you will see that the covariance_type option was set differently within each. This hyperparameter controls the degrees of freedom in the shape of each cluster; it is essential to set this carefully for any given problem. The default is covariance_type="full", which means that the size of the cluster along each dimension can be set independently, with the resulting ellipse constrained to align with the axes. Ellipses parallel to the axes. 
 A slightly simpler and faster model is covariance_type="spherical", which constrains the shape of the cluster such that all dimensions are equal. The resulting clustering will have similar characteristics to that of k-means, though it is not entirely equivalent. A more complicated and computationally expensive model (especially as the number of dimensions grows) is to use covariance_type=" diag", which allows each cluster to be modeled as an ellipse with arbitrary orientation. Any orientation. 
